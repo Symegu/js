@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  /**
+   * Вычисляет операцию в переменной operation
+   * @param {number} a - 1 число
+   * @param {number} b - 2 число
+   * @param {number} operation операция с числами
+   * @return {number} возвращает полученное значение в ходе выполнения функции
+   */
+  function mathOperation(arg1, arg2, operation);{
+    switch (operation) {
+      case "+": return addition(a, b);
+      case "-": return subtraction(a, b);
+      case "*": return multiplication(a, b);
+      case ":": return segmentation(a, b);
+      default: return NaN;
+    }
+  }
+
+  /**
+   * Сумма аргументов
+   * @param {number} a - 1 число
+   * @param {number} b - 2 число
+   * @return {number} сумма чисел
+   */
+   function addition(a, b) {
+    return a + b;
+  }
+
+  /**
+   * Разница аргументов
+   * @param {number} a - 1 число
+   * @param {number} b - 2 число
+   * @return {number} разница чисел
+   */
+  function subtraction(a, b) {
+    if (a > b) {
+      return a - b;
+    }
+    return b - a;
+  }
+
+  /**
+   * Произведение аргументов
+   * @param {number} a - 1 число
+   * @param {number} b - 2 число
+   * @return {number} произведение чисел
+   */
+  function multiplication(a, b) {
+    return a * b;
+  }
+
+  /**
+   * Частное аргументов
+   * @param {number} a - 1 число
+   * @param {number} b - 2 число
+   * @return {number} частное чисел
+   */
+  function segmentation(a, b) {
+    return a / b;
+  }
+  
+</script>
+</body>
+</html>
